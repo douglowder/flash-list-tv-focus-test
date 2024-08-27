@@ -49,6 +49,7 @@ const Grid = () => {
           index={index}
           onFocus={handleFocus}
           onPress={updateStrings}
+          key={item.id}
         >
           <View
             style={{
@@ -71,7 +72,6 @@ const Grid = () => {
       data={state}
       drawDistance={200}
       estimatedItemSize={50}
-      keyExtractor={keyExtractor}
       renderItem={handleRenderRow}
       scrollEnabled={false}
       showsHorizontalScrollIndicator={false}

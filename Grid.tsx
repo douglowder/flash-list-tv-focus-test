@@ -1,4 +1,4 @@
-import { FlashList } from '@shopify/flash-list';
+import { FlashList, FlashListRef } from '@shopify/flash-list';
 import React, { useCallback, useRef, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
@@ -17,7 +17,7 @@ const generateRandomStrings = (length: number) => {
 const initialContent = generateRandomStrings(300);
 
 const Grid = () => {
-  const flashListRef = useRef<FlashList<any>>(null);
+  const flashListRef = useRef<FlashListRef<any>>(null);
   const [state, setState] = useState(initialContent);
 
   const updateStrings = useCallback(() => {
@@ -70,7 +70,6 @@ const Grid = () => {
       ref={flashListRef}
       data={state}
       drawDistance={200}
-      estimatedItemSize={50}
       keyExtractor={keyExtractor}
       renderItem={handleRenderRow}
       scrollEnabled={false}

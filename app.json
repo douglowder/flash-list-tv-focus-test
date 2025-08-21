@@ -17,6 +17,7 @@
         }
       ]
     ],
+    "newArchEnabled": true,
     "name": "FlashListTVFocusTest",
     "slug": "FlashListTVFocusTest"
   }
